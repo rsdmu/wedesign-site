@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient: radial-gradient(1000px 600px at 10% -10%, rgba(59,130,246,0.15), transparent 50%),
+              radial-gradient(600px 400px at 110% 10%, rgba(16,185,129,0.12), transparent 60%),
+              radial-gradient(600px 400px at 50% 120%, rgba(168,85,247,0.12), transparent 60%);
+}
+
+html, body {
+  @apply bg-black text-white antialiased;
+  background-image: var(--gradient);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur border border-white/10;
+}
+
+.container-2xl {
+  @apply max-w-7xl mx-auto px-6 md:px-10;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #60A5FA 0%, #A78BFA 50%, #34D399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+}
+
+.card {
+  @apply glass rounded-xl p-6;
+}
