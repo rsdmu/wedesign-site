@@ -1,38 +1,40 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SITE_NAME, DOMAIN, TAGLINE } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wedesign.one"),
-  title: "WeDesign+ — Participatory AI for Inclusive Public Spaces",
-  description: "Research‑backed platform that turns community ideas into instant visual scenarios for equitable urban design.",
+  title: SITE_NAME + " — " + TAGLINE,
+  description: "WeDesign+ is a participatory AI platform that helps cities co-create inclusive public spaces that reflect diverse community needs.",
+  metadataBase: new URL("https://" + DOMAIN),
   openGraph: {
-    title: "WeDesign+",
-    description: "Participatory AI for inclusive public space design.",
-    images: ["/og.png"],
-    url: "https://wedesign.one",
-    siteName: "WeDesign+",
+    title: SITE_NAME,
+    description: TAGLINE,
+    url: "https://" + DOMAIN,
+    siteName: SITE_NAME,
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WeDesign+",
-    description: "Participatory AI for inclusive public space design.",
+    title: SITE_NAME,
+    description: TAGLINE,
     images: ["/og.png"],
   },
-  alternates: { canonical: "https://wedesign.one" },
-  robots: { index: true, follow: true },
+  icons: [{ rel: "icon", url: "/favicon.svg" }],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-dvh">
         <Header />
-        <main className="pb-24 pt-24">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

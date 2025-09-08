@@ -1,8 +1,12 @@
-export default function FeatureCard({ title, children }: { title: string; children: React.ReactNode }) {
+import React from "react";
+import { cn } from "@/lib/utils";
+import { Check } from "lucide-react";
+
+export default function FeatureCard({title, children, className}:{title:string; children:React.ReactNode; className?:string}){
   return (
-    <div className="paper p-6">
-      <h3 className="mb-2 text-lg font-medium">{title}</h3>
-      <p className="text-sm text-muted">{children}</p>
+    <div className={cn("card", className)}>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <div className="mt-3 text-white/80 text-sm leading-6">{children}</div>
     </div>
   );
 }

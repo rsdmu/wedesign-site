@@ -2,28 +2,32 @@
   "name": "wedesign-one",
   "version": "1.0.0",
   "private": true,
-  "description": "WeDesign+ \u2014 Research-backed, minimalist marketing site for inclusive, AI-facilitated urban design consultations.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "tailwindcss -i ./app/globals.css -o ./app/globals.css --minify || echo 'tailwind postinstall noop'"
+    "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "2.1.1",
+    "framer-motion": "11.3.30",
+    "lucide-react": "0.453.0",
     "next": "14.2.5",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "clsx": "2.1.1"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "0.5.15",
+    "@types/node": "24.3.1",
+    "@types/react": "19.1.12",
     "autoprefixer": "10.4.19",
-    "postcss": "8.4.38",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "8.4.41",
     "tailwindcss": "3.4.10",
-    "typescript": "5.6.2",
-    "@types/react": "18.3.7",
-    "@types/node": "20.14.12",
-    "eslint": "9.9.0",
-    "eslint-config-next": "14.2.5"
+    "typescript": "5.6.2"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   }
 }
