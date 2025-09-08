@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
@@ -6,6 +6,11 @@ import { Footer } from "@/components/Footer";
 import { SITE_NAME, DOMAIN, TAGLINE } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: SITE_NAME + " — " + TAGLINE,
