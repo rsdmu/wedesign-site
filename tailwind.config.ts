@@ -1,35 +1,26 @@
 import type { Config } from "tailwindcss";
 const config: Config = {
-  darkMode: ["class"],
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        display: ["var(--font-inter)"],
-        sans: ["var(--font-inter)"],
-      },
       colors: {
-        brand: {
-          50: "#F2F8FF",
-          100: "#E6F1FF",
-          200: "#BFDBFE",
-          300: "#93C5FD",
-          400: "#60A5FA",
-          500: "#3B82F6",
-          600: "#2563EB",
-          700: "#1D4ED8",
-          800: "#1E40AF",
-          900: "#1E3A8A"
-        }
+        canvas: "#F6F3ED",
+        ink: "#1C1C1C",
+        muted: "#6B6B6B",
+        accent: "#8B7E6A"
       },
-      backgroundImage: {
-        'grid': "radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0)",
+      boxShadow: {
+        card: "0 8px 30px rgba(0,0,0,0.06)",
+        soft: "0 1px 1px rgba(0,0,0,0.04), 0 24px 48px rgba(0,0,0,0.08)"
+      },
+      borderRadius: {
+        "xl2": "1.25rem"
       }
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 };
 export default config;
