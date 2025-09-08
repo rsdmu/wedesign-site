@@ -1,0 +1,29 @@
+# --- OS junk ---
+.DS_Store
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+.vercel/
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment files (ignore all, but keep examples) ---
+**/.env*
+!**/.env.example
+
+# --- Python virtualenvs anywhere ---
+**/venv/
+**/.venv/
+**/env/
+**/.env/        # (directory named "env", not the .env file)
+
+# --- App-local data ---
+uploads/
+data/accounts.json
+data/pending_codes.json
