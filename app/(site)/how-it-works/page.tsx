@@ -10,9 +10,9 @@ export default function HowItWorksPage(){
         <div className="mt-8">
           <Steps steps={[
             {title: "Public perception & site selection", body: "Select representative streets and spaces via a diversity grid and local knowledge."},
-            {title: "Individual rating", body: "Residents score 20 images on 4 key criteria to establish baselines."},
-            {title: "Group rating & re-evaluation", body: "Small groups discuss, re-evaluate with all 12 criteria, and document rationales."},
-            {title: "Ranking exercise", body: "Rank 7 options with full criteria to reveal trade-offs and consensus."},
+            {title: "Individual rating", body: "Residents score images on key criteria to establish baselines."},
+            {title: "Group rating & re-evaluation", body: "Small groups discuss, re-evaluate, and document rationales."},
+            {title: "Ranking exercise", body: "Rank options to reveal trade-offs and consensus."},
             {title: "Results synthesis", body: "Surface agreement vs. disagreement, including shifts post‑dialogue."},
             {title: "Design briefing", body: "Translate insights into a design brief and before/after visuals."},
           ]} />
