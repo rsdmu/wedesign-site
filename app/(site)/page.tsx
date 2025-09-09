@@ -4,6 +4,7 @@ import VideoPlayer from "@/components/VideoPlayer";
 import Marquee from "@/components/Marquee";
 import FeatureCard from "@/components/FeatureCard";
 import Steps from "@/components/Steps";
+import { STREET_QUALITY_CRITERIA } from "@/lib/utils";
 
 export default function Page(){
   return (
