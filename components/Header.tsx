@@ -26,7 +26,7 @@ export function Header(){
               <Logo />
               <span className="font-semibold tracking-tight text-white">WeDesign<span className="text-white/60">+</span></span>
             </Link>
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-1" aria-label="Primary">
               {NAV.map(item => (
                 <Link
                   key={item.href}
@@ -51,13 +51,15 @@ export function Header(){
                 className="md:hidden px-3 py-2 rounded-lg bg-white/10"
                 onClick={() => setOpen(!open)}
                 aria-label="Toggle menu"
+                aria-expanded={open}
+                aria-controls="mobile-menu"
               >
                 {open ? "✕" : "☰"}
               </button>
             </div>
           </div>
           {open && (
-            <nav className="md:hidden px-4 pb-4 flex flex-col gap-1">
+            <nav id="mobile-menu" className="md:hidden px-4 pb-4 flex flex-col gap-1" aria-label="Mobile">
               {NAV.map(item => (
                 <Link
                   key={item.href}
