@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ORGS } from "@/lib/utils";
-import { motion, useAnimationFrame } from "framer-motion";
+// Removed dependency on framer-motion which caused installation issues.
 
 export default function Marquee(){
   return (
