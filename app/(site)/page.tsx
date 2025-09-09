@@ -57,26 +57,53 @@ export default function Page(){
       <Section className="mt-16 md:mt-24">
         <div className="grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-7">
-            <h2 className="text-2xl font-semibold">How it works</h2>
-            <p className="mt-3 text-white/80 max-w-2xl">A repeatable, mixed-methods workflow that captures authentic local knowledge and balances plural values.</p>
-            <div className="mt-6">
-              <Steps steps={[
-                {title: "Recruit & listen", body: "Partner with community organizations; recruit across a diversity grid and conduct interviews to gather context."},
-                {title: "Rate what matters", body: "Residents individually rate street images, then discuss and re-evaluate together."},
-                {title: "Rank & brief", body: "Convert agreement patterns into ranked options and a design brief, then show before/after concepts stakeholders can compare."}
-              ]} />
+            <div className="card">
+              <h3 className="text-white text-lg font-semibold">12 criteria we measure</h3>
+              <ul className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-white/80">
+                {STREET_QUALITY_CRITERIA.map(c => <li key={c} className="px-3 py-2 rounded-lg bg-white/5 border border-white/10">{c}</li>)}
+              </ul>
             </div>
           </div>
           <div className="md:col-span-5">
             <div className="card">
-              <h3 className="text-white text-lg font-semibold">Ethical safeguards</h3>
-              <ul className="mt-3 space-y-2 text-sm text-white/80">
-                <li>Pluralistic alignment across values (equal-weight ratings)</li>
-                <li>Local place understanding in model training</li>
-                <li>Transparent methods and repeatable small-group consultations</li>
+              <h3 className="text-white text-lg font-semibold">Pilot snapshot</h3>
+              <ul className="mt-3 space-y-2 text-white/80 text-sm">
+                <li>100+ organizations reached for recruitment</li>
+                <li>28 residents consulted across diversity grid</li>
+                <li>20 street images rated; 7 images ranked using 12 criteria</li>
+                <li>Consensus strongest on aesthetics &amp; regeneration; weaker on inclusivity &amp; practicality</li>
               </ul>
             </div>
           </div>
+        </div>
+      </Section>
+
+      <Section className="mt-16 md:mt-24">
+        <h2 className="text-2xl font-semibold">How it works</h2>
+        <p className="mt-3 text-white/80 max-w-2xl">
+          A structured co-creation workflow that turns community ideas into a tagged image library for future planning.
+        </p>
+        <div className="mt-6">
+          <Steps
+            steps={[
+              {
+                title: "Co-create prompts",
+                body: "Small groups brainstorm ambiance, usage, and materiality, then draft text prompts together.",
+              },
+              {
+                title: "Generate & discuss",
+                body: "WeDesign turns prompts into images; participants review results, comment, and iterate to refine their intent.",
+              },
+              {
+                title: "Tag and store",
+                body: "Prompt–image–comment sets are saved with metadata and theme tags for future reference.",
+              },
+              {
+                title: "Reuse in planning",
+                body: "Clustered images support consultation boards, design briefs, policy guidelines, and ongoing analysis.",
+              },
+            ]}
+          />
         </div>
       </Section>
 
