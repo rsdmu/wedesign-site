@@ -4,7 +4,6 @@ import VideoPlayer from "@/components/VideoPlayer";
 import Marquee from "@/components/Marquee";
 import FeatureCard from "@/components/FeatureCard";
 import Steps from "@/components/Steps";
-import { STREET_QUALITY_CRITERIA } from "@/lib/utils";
 
 export default function Page(){
   return (
@@ -27,7 +26,7 @@ export default function Page(){
               <Button href="/product" variant="ghost">Explore the product</Button>
             </div>
             <div className="mt-8 text-xs text-white/50 max-w-lg">
-              Backed by dialogue-based methods that increased agreement on inclusivity and accessibility after group discussion.
+              Backed by dialogue-based methods that increased agreement after group discussion.
             </div>
           </div>
           <div className="lg:col-span-6">
@@ -44,7 +43,7 @@ export default function Page(){
       <Section className="mt-16 md:mt-24">
         <div className="grid md:grid-cols-3 gap-4">
           <FeatureCard title="See what residents see">
-            Use image-based prompts of real streets to rapidly gather preferences across 12 street-quality criteria—from accessibility to aesthetics.
+            Use image-based prompts of real streets to rapidly gather preferences across key street-quality dimensions.
           </FeatureCard>
           <FeatureCard title="Facilitate consensus">
             Move from individual ratings to small-group dialogue and re-evaluation to surface agreements and disagreements.
@@ -58,36 +57,12 @@ export default function Page(){
       <Section className="mt-16 md:mt-24">
         <div className="grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-7">
-            <div className="card">
-              <h3 className="text-white text-lg font-semibold">12 criteria we measure</h3>
-              <ul className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-white/80">
-                {STREET_QUALITY_CRITERIA.map(c => <li key={c} className="px-3 py-2 rounded-lg bg-white/5 border border-white/10">{c}</li>)}
-              </ul>
-            </div>
-          </div>
-          <div className="md:col-span-5">
-            <div className="card">
-              <h3 className="text-white text-lg font-semibold">Pilot snapshot</h3>
-              <ul className="mt-3 space-y-2 text-white/80 text-sm">
-                <li>100+ organizations reached for recruitment</li>
-                <li>28 residents consulted across diversity grid</li>
-                <li>20 street images rated; 7 images ranked using 12 criteria</li>
-                <li>Consensus strongest on aesthetics &amp; regeneration; weaker on inclusivity &amp; practicality</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <Section className="mt-16 md:mt-24">
-        <div className="grid md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-7">
             <h2 className="text-2xl font-semibold">How it works</h2>
             <p className="mt-3 text-white/80 max-w-2xl">A repeatable, mixed-methods workflow that captures authentic local knowledge and balances plural values.</p>
             <div className="mt-6">
               <Steps steps={[
                 {title: "Recruit & listen", body: "Partner with community organizations; recruit across a diversity grid and conduct interviews to gather context."},
-                {title: "Rate what matters", body: "Residents individually rate street images on 4 key criteria, then discuss and re-evaluate using all 12."},
+                {title: "Rate what matters", body: "Residents individually rate street images, then discuss and re-evaluate together."},
                 {title: "Rank & brief", body: "Convert agreement patterns into ranked options and a design brief, then show before/after concepts stakeholders can compare."}
               ]} />
             </div>

@@ -5,7 +5,7 @@ export default function ResearchPage(){
     <>
       <Section className="pt-12 md:pt-20 prose prose-invert max-w-none">
         <h1>Research & Ethics</h1>
-        <p>WeDesign+ stands on established research in citizen engagement and participatory methods. Our workflow is designed to increase agreement on inclusivity and accessibility through structured group dialogue while keeping plural values visible.</p>
+        <p>WeDesign+ stands on established research in citizen engagement and participatory methods. Our workflow is designed to increase agreement through structured group dialogue while keeping plural values visible.</p>
         <h2>Selected references</h2>
         <ul>
           <li>DataIntelo – Citizen Engagement Software Market (industry outlook)</li>
@@ -15,7 +15,7 @@ export default function ResearchPage(){
         </ul>
         <h2>Ethical safeguards</h2>
         <ul>
-          <li>Pluralistic alignment techniques; equal-weight ratings across criteria</li>
+          <li>Pluralistic alignment techniques; equal-weight ratings</li>
           <li>Local place understanding in training data</li>
           <li>Transparent small‑group consultations; auditability of shifts pre/post discussion</li>
         </ul>
