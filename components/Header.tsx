@@ -11,11 +11,12 @@ const NAV = [
   {href: "/how-it-works", label: "How it Works"},
   {href: "/research", label: "Research"},
   {href: "/team", label: "Team"},
-  {href: "/contact", label: "Contact"}
+  {href: "/contact", label: "Contact"},
 ];
 
 export function Header(){
   const pathname = usePathname();
+  const [open, setOpen] = React.useState(false);
   return (
     <header className="sticky top-0 z-50">
       <div className="container-2xl">
@@ -27,17 +28,51 @@ export function Header(){
             </Link>
             <nav className="hidden md:flex items-center gap-1">
               {NAV.map(item => (
-                <Link key={item.href} href={item.href} className={cn(
-                  "px-3 py-2 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/10",
-                  pathname === item.href && "text-white bg-white/10"
-                )}>{item.label}</Link>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "px-3 py-2 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/10",
+                    pathname === item.href && "text-white bg-white/10",
+                  )}
+                >
+                  {item.label}
+                </Link>
               ))}
             </nav>
             <div className="flex items-center gap-3">
-              <Link href="/contact" className="hidden md:inline-flex px-4 py-2 rounded-lg bg-white text-black text-sm font-medium">Request a demo</Link>
-              <button className="md:hidden px-3 py-2 rounded-lg bg-white/10">☰</button>
+              <Link
+                href="/contact"
+                className="hidden md:inline-flex px-4 py-2 rounded-lg bg-white text-black text-sm font-medium"
+              >
+                Request a demo
+              </Link>
+              <button
+                className="md:hidden px-3 py-2 rounded-lg bg-white/10"
+                onClick={() => setOpen(!open)}
+                aria-label="Toggle menu"
+              >
+                {open ? "✕" : "☰"}
+              </button>
             </div>
           </div>
+          {open && (
+            <nav className="md:hidden px-4 pb-4 flex flex-col gap-1">
+              {NAV.map(item => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "px-3 py-2 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/10",
+                    pathname === item.href && "text-white bg-white/10",
+                  )}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
       </div>
     </header>
