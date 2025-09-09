@@ -16,6 +16,17 @@ export const metadata: Metadata = {
   title: SITE_NAME + " — " + TAGLINE,
   description: "WeDesign+ is a participatory AI platform that helps cities co-create inclusive public spaces that reflect diverse community needs.",
   metadataBase: new URL("https://" + DOMAIN),
+  alternates: {
+    canonical: "https://" + DOMAIN,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: SITE_NAME,
     description: TAGLINE,
