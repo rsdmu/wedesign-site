@@ -4,7 +4,6 @@ import VideoPlayer from "@/components/VideoPlayer";
 import Marquee from "@/components/Marquee";
 import FeatureCard from "@/components/FeatureCard";
 import Steps from "@/components/Steps";
-import { STREET_QUALITY_CRITERIA } from "@/lib/utils";
 
 export default function Page(){
   return (
@@ -27,7 +26,7 @@ export default function Page(){
               <Button href="/product" variant="ghost">Explore the product</Button>
             </div>
             <div className="mt-8 text-xs text-white/50 max-w-lg">
-              Backed by dialogue-based methods that increased agreement on inclusivity and accessibility after group discussion.
+              Backed by dialogue-based methods that increased agreement after group discussion.
             </div>
           </div>
           <div className="lg:col-span-6">
@@ -44,7 +43,7 @@ export default function Page(){
       <Section className="mt-16 md:mt-24">
         <div className="grid md:grid-cols-3 gap-4">
           <FeatureCard title="See what residents see">
-            Use image-based prompts of real streets to rapidly gather preferences across 12 street-quality criteria—from accessibility to aesthetics.
+            Use image-based prompts of real streets to rapidly gather preferences across key street-quality dimensions.
           </FeatureCard>
           <FeatureCard title="Facilitate consensus">
             Move from individual ratings to small-group dialogue and re-evaluation to surface agreements and disagreements.
