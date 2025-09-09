@@ -5,17 +5,31 @@ export default function HowItWorksPage(){
   return (
     <>
       <Section className="pt-12 md:pt-20">
-        <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">How it Works</h1>
-        <p className="mt-3 text-white/80 max-w-2xl">We combine public perception, structured rating, and dialogue to capture what matters—and where values diverge.</p>
+        <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">How it works</h1>
+        <p className="mt-3 text-white/80 max-w-2xl">
+          A structured co-creation workflow that turns community ideas into a tagged image library for future planning.
+        </p>
         <div className="mt-8">
-          <Steps steps={[
-            {title: "Public perception & site selection", body: "Select representative streets and spaces via a diversity grid and local knowledge."},
-            {title: "Individual rating", body: "Residents score images on key criteria to establish baselines."},
-            {title: "Group rating & re-evaluation", body: "Small groups discuss, re-evaluate, and document rationales."},
-            {title: "Ranking exercise", body: "Rank options to reveal trade-offs and consensus."},
-            {title: "Results synthesis", body: "Surface agreement vs. disagreement, including shifts post‑dialogue."},
-            {title: "Design briefing", body: "Translate insights into a design brief and before/after visuals."},
-          ]} />
+          <Steps
+            steps={[
+              {
+                title: "Co-create prompts",
+                body: "Small groups brainstorm ambiance, usage, and materiality, then draft text prompts together.",
+              },
+              {
+                title: "Generate & discuss",
+                body: "WeDesign turns prompts into images; participants review results, comment, and iterate to refine their intent.",
+              },
+              {
+                title: "Tag and store",
+                body: "Prompt–image–comment sets are saved with metadata and theme tags for future reference.",
+              },
+              {
+                title: "Reuse in planning",
+                body: "Clustered images support consultation boards, design briefs, policy guidelines, and ongoing analysis.",
+              },
+            ]}
+          />
         </div>
       </Section>
     </>
