@@ -28,7 +28,7 @@ export function Footer(){
         </div>
         <div className="text-white/60">
           <p>&copy; {new Date().getFullYear()} WeDesign+. All rights reserved.</p>
-          <p className="mt-1">Built for Vercel • Montreal, Canada</p>
+          <p className="mt-1">Montreal, Canada</p>
         </div>
       </div>
     </footer>
