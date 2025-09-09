@@ -80,28 +80,31 @@ export default function Page(){
       </Section>
 
       <Section className="mt-16 md:mt-24">
-        <div className="grid md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-7">
-            <h2 className="text-2xl font-semibold">How it works</h2>
-            <p className="mt-3 text-white/80 max-w-2xl">A repeatable, mixed-methods workflow that captures authentic local knowledge and balances plural values.</p>
-            <div className="mt-6">
-              <Steps steps={[
-                {title: "Recruit & listen", body: "Partner with community organizations; recruit across a diversity grid and conduct interviews to gather context."},
-                {title: "Rate what matters", body: "Residents individually rate street images on 4 key criteria, then discuss and re-evaluate using all 12."},
-                {title: "Rank & brief", body: "Convert agreement patterns into ranked options and a design brief, then show before/after concepts stakeholders can compare."}
-              ]} />
-            </div>
-          </div>
-          <div className="md:col-span-5">
-            <div className="card">
-              <h3 className="text-white text-lg font-semibold">Ethical safeguards</h3>
-              <ul className="mt-3 space-y-2 text-sm text-white/80">
-                <li>Pluralistic alignment across values (equal-weight ratings)</li>
-                <li>Local place understanding in model training</li>
-                <li>Transparent methods and repeatable small-group consultations</li>
-              </ul>
-            </div>
-          </div>
+        <h2 className="text-2xl font-semibold">How it works</h2>
+        <p className="mt-3 text-white/80 max-w-2xl">
+          A structured co-creation workflow that turns community ideas into a tagged image library for future planning.
+        </p>
+        <div className="mt-6">
+          <Steps
+            steps={[
+              {
+                title: "Co-create prompts",
+                body: "Small groups brainstorm ambiance, usage, and materiality, then draft text prompts together.",
+              },
+              {
+                title: "Generate & discuss",
+                body: "WeDesign turns prompts into images; participants review results, comment, and iterate to refine their intent.",
+              },
+              {
+                title: "Tag and store",
+                body: "Prompt–image–comment sets are saved with metadata and theme tags for future reference.",
+              },
+              {
+                title: "Reuse in planning",
+                body: "Clustered images support consultation boards, design briefs, policy guidelines, and ongoing analysis.",
+              },
+            ]}
+          />
         </div>
       </Section>
 
